@@ -1,0 +1,36 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore Visual Studio user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.log
+
+# Optional: ignore IDE/editor configs
+.vscode/
+
+# Note: .csproj files are now included in version control
+# as they contain important project configurationutputs
+bin/
+obj/
+
+# Ignore Visual Studio user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore project file if you don’t want to push it
+# *.csproj
+
+# Optional: ignore other IDE/editor configs
+.vscode/
+*.log
+# *.sln
