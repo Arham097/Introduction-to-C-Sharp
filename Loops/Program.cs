@@ -10,6 +10,7 @@ while (i > 0)
     i--;
 }
 
+// Do while Loop
 int j = 3;
 do
 {
@@ -17,15 +18,27 @@ do
     j--;
 } while (j > 0);
 
+
+// 3. For Loop
 for (int k = 0; k < 3; k++)
 {
     Console.WriteLine("Hello " + k);
 }
 
-
+// 4. foreach Loop
 string[] names = ["Arham", "Akhzer", "Bilal", "Zegham"];
 
 foreach (string name in names)
 {
     Console.WriteLine(name);
+}
+
+// 5. Nested Loops
+
+for (int l = 0; l < 5; l++)
+{
+    for (int m = 0; m < 5; m++)
+    {
+        Console.WriteLine(l + " , " + m);
+    }
 }
