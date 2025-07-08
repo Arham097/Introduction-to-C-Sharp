@@ -49,5 +49,25 @@ class Program
             Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}"); // Sorted by key: 1, 2, 3
         }
 
+        // For Struct
+        MyStruct str1 = new MyStruct();
+        str1.SetA(5);
+        Console.WriteLine(str1.GetA());
+    }
+
+    // 6. Struct (Similar to Class but value type)
+    private struct MyStruct
+    {
+        private int a;
+
+        public int GetA()
+        {
+            return a;
+        }
+
+        public void SetA(int a)
+        {
+            this.a = a;
+        }
     }
 }

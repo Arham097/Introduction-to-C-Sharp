@@ -1,10 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-class Player
+class Player2
 {
     public string name = "";
 
-    public Player(string name)
+    public Player2(string name)
     {
         this.name = name;
         Console.WriteLine($"Creating Player {name}");
@@ -46,8 +46,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Player p1 = new Player("Arham");
-        // Player p2 = new Player("Akhzer");
+        // Player2 p1 = new Player("Arham");
+        // Player2 p2 = new Player("Akhzer");
         // p1.sayHello();
         // p2.sayHello();
 
@@ -64,5 +64,55 @@ class Program
 
         Bikes.SayHello("Unique");
 
+
+
+        Player p1 = new Player();
+        Unit u1 = new Player();
+
+        p1.Move(); // Move Unit (because it inherits parent move method)
+        u1.Move(); // Move Unit
+
+
+        // instantiating abstract classes cause an error
+        // Enemy e1 = new Enemy(); // Cannot create instance of an abstract class
+
+    }
+
+    // 2. Inheritance
+    // 3. Polymorphism
+
+    public class Player : Unit
+    {
+        public Player()
+        {
+            speed = 5;
+
+        }
+        public override void Move()
+        {
+            Console.WriteLine("Move Player");
+        }
+
+    }
+    public class Unit
+    {
+        public float speed;
+
+        public virtual void Move()
+        {
+            Console.WriteLine("Move Unit");
+        }
+    }
+
+    // 4. Abstract Classes and methods
+    // Abstract classes are the classes that cannot instatiated but meant to be inherited by other classes
+    // it provides definition how class should be defined
+    // in the same way abstract methods only have definition and inherited classes defined its body
+
+    public abstract class Enemy
+    {
+        public abstract void HealthDown();
     }
 }
+
+
