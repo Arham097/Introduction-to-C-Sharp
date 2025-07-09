@@ -14,6 +14,12 @@ class Program
         {
             Console.WriteLine("Hello!");
         }
+
+        // For understanding concept
+        private class Unit
+        {
+
+        }
     }
     public static void Main(string[] args)
     {
@@ -37,6 +43,21 @@ class Program
         {
             Console.WriteLine(metInfo);
         }
+
+        // List all NestedTypes
+        Console.WriteLine("\nNested Types");
+        // As Nested Types is private so it does not show normally so we use Binding FLags for it
+        foreach (Type types in typeof(Player).GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Static))
+        {
+            Console.WriteLine(types);
+        }
+
+        // We can also check for anything  that we expect to be implemented on appear in future
+        // Like Player class may contian my functions in future
+        // Like for implementing an Exercise where user have to implement myFunction while learning Functions so it is help there
+        object playerObject = Activator.CreateInstance(Player);
+        MethodInfo myFunctionInfo = typeof(Player).GetMethod("MyFunction");
+        myFunctionInfo.Invoke(playerObject, new object[] { });
     }
 
 }
