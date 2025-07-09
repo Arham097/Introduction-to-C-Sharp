@@ -76,6 +76,11 @@ class Program
         // instantiating abstract classes cause an error
         // Enemy e1 = new Enemy(); // Cannot create instance of an abstract class
 
+        // Testing Static Constructor
+
+        // Member m1 = new Member();
+        Console.WriteLine(Member.i);
+
     }
 
     // 2. Inheritance
@@ -112,6 +117,26 @@ class Program
     public abstract class Enemy
     {
         public abstract void HealthDown();
+    }
+
+
+    //////////////   Static Constructor ////////////////////
+    /// TO RUN SOME INITIALIZATION CODE BEFORE ANYTHING USED IN A CLASS
+    /// Whenever object is created or any fields of class is used static constructor runs first
+
+    public class Member
+    {
+        static Member()
+        {
+            Console.WriteLine("Static Constructor Called");
+
+            i = 5;
+        }
+        public static int i;
+        public Member()
+        {
+            Console.WriteLine("Player Constructor");
+        }
     }
 }
 

@@ -82,3 +82,16 @@ static void eligibleForVote(int age, bool isEligible = true)
 
 // eligibleForVote(18); // You are eligible to vote (because default its true)
 eligibleForVote(17, false);
+
+
+// Function Extensions (Extend a type with new functions without modifying it)
+
+bool b = false;
+Console.WriteLine(b.IsTrue());
+public static class TransformExtensions
+{
+    public static void IsTrue(this bool b)
+    {
+        return b;
+    }
+}
