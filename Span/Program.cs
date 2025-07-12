@@ -11,6 +11,7 @@ class Program
         {
             Console.WriteLine(num);
         }
+        // It has various function that can implement but as it point to same memory so change in span, also change original array
         numSpan.Sort();
         foreach (int num in numSpan)
         {
