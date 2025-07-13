@@ -5,6 +5,7 @@
 // bool
 // double
 // char
+// var
 
 int number = 10;
 string text = "Hello, World!";
